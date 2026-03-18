@@ -5,9 +5,11 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 // We'll use simple GoRouter for now. 
 // Navigation scaffold for MVP.
 
+import '../features/onboarding/onboarding_view.dart';
+
 final appRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
-    initialLocation: '/',
+    initialLocation: '/onboarding', // Start here for testing the flow
     routes: [
       GoRoute(
         path: '/',
@@ -23,9 +25,7 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: '/onboarding',
-        builder: (context, state) => const Scaffold(
-          body: Center(child: Text('Onboarding Screen')),
-        ),
+        builder: (context, state) => const OnboardingView(),
       ),
       GoRoute(
         path: '/home',
