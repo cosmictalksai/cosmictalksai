@@ -1,7 +1,6 @@
 {
   "version": 2,
   "public": true,
-  "buildCommand": "bash vercel-build.sh",
   "outputDirectory": "build/web",
   "rewrites": [
     {
